@@ -1,6 +1,6 @@
 sequenceDiagram
-participant browser
-participant server
+    participant browser
+    participant server
 
     browser->>server: GET /spa
     activate server

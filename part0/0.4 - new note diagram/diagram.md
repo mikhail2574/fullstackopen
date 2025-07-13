@@ -1,6 +1,6 @@
 sequenceDiagram
-participant browser
-participant server
+    participant browser
+    participant server
 
     Note over browser: User writes a note and clicks "Save"
 
