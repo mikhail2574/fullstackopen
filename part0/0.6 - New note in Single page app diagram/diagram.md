@@ -10,11 +10,11 @@ sequenceDiagram
     browser->>browser: notes.push(note)
     browser->>browser: redrawNotes()
 
-    browser->>server: POST /new_note_spa
-        Content-Type: application/json
-        Body: { content: "...", date: "..." }
+    Note over browser: Prepare JSON & send via fetch/XHR
+    browser->>server: POST /new_note_spa (JSON)
 
     activate server
+    Note over server: Content-Type: application/json<br>Body: { content: "...", date: "..." }
     server-->>browser: 201 Created
     deactivate server
 
