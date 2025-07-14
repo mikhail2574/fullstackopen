@@ -39,14 +39,14 @@ const PersonForm = ({
               (person) => person.name === newName
             );
             personService
-              .update(personToUpdate.id, {
+              .update(personToUpdate._id, {
                 name: newName,
                 number: newPhoneNumber,
               })
               .then((response) => {
                 setPersons(
                   persons.map((person) =>
-                    person.id !== personToUpdate.id ? person : response.data
+                    person._id !== personToUpdate._id ? person : response.data
                   )
                 );
 
@@ -71,7 +71,13 @@ const PersonForm = ({
         personService
           .create({ name: newName, number: newPhoneNumber })
           .then((response) => {
-            setPersons(persons.concat(response.data));
+            // Ensure the new person object includes the id from the response
+            const newPerson = {
+              name: newName,
+              number: newPhoneNumber,
+              _id: response.data._id,
+            };
+            setPersons(persons.concat(newPerson));
 
             setNotifyMessage(`Person '${newName}' was added to phonebook`);
             setTimeout(() => {

@@ -8,7 +8,7 @@ const Person = ({ person, persons, setPersons, setErrorMessage }) => {
         onClick={() => {
           if (window.confirm(`Delete ${person.name}?`)) {
             try {
-              personService.delete(person.id);
+              personService.delete(person._id);
             } catch (e) {
               setErrorMessage(
                 `Person '${person.name}' was already removed from phonebook. ${e.message}`
@@ -17,7 +17,7 @@ const Person = ({ person, persons, setPersons, setErrorMessage }) => {
                 setErrorMessage(null);
               }, 5000);
             }
-            setPersons(persons.filter((p) => p.id !== person.id));
+            setPersons(persons.filter((p) => p._id !== person._id));
           }
         }}
       >
