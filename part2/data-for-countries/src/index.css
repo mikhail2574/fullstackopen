@@ -1,0 +1,49 @@
+.country-details {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.country-details h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.country-details img {
+    display: block;
+    max-width: 200px;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.country-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.country-details li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.country-details .label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.country-details .languages {
+    margin-top: 1rem;
+}
+
+.country-details .weather {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #eaf6fb;
+    border-radius: 8px;
+}
