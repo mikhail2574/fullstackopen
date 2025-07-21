@@ -1,4 +1,5 @@
 import axios from "axios";
+//https://backend-lingering-snow-1218.fly.dev/api/persons
 const baseUrl = "http://localhost:3001/api/persons";
 
 const getAll = () => {
